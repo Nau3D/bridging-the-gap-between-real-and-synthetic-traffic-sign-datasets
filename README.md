@@ -22,7 +22,7 @@ When real data is available it is possible to add more information to the genera
 
 In the absence of real data, the overall brightness of the image is computed as:
 
-$B = bias + u^\gamma \times (255.bias)
+$B = bias + u^\gamma \times (255.bias)$
 
 Most works so far use real scenery images as backgrounds for the synthetic samples. We also explored applying solid colour backgrounds. 
 
