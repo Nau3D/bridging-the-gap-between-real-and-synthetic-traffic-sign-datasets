@@ -24,6 +24,8 @@ In the absence of real data, the overall brightness of the image is computed as:
 
 $B = bias + u^\gamma \times (255.bias)$
 
+where $bias$ determines the minimum brightness. In  our tests we set $bias=10$ and $\gamma = 2$
+
 Most works so far use real scenery images as backgrounds for the synthetic samples. We also explored applying solid colour backgrounds. 
 
 All options included we were able to generate four different datasets:
