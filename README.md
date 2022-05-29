@@ -1,4 +1,4 @@
-#### Bridging the Gap Between Real and Synthetic Traffic Sign Repositories
+# Bridging the Gap Between Real and Synthetic Traffic Sign Repositories
 
 Diogo Lopes da Silva and António Ramires Fernandes
 
@@ -34,7 +34,7 @@ All options included we were able to generate four different datasets:
 
 As opposed to previous works such as [1] and [2] we didn´t aim at achieving photo-realistic imagery for our synthetic samples, yet we were able to achieve state of the art results with our approach. 
 
-##### Refs
+### Refs
 
 [1] Luo, H., Kong, Q., and Wu, F. (2018). Traffic sign image synthesis with generative adversarial networks.
 In 2018 24th International Conference on Pattern Recognition (ICPR), pages 2540–2545.
