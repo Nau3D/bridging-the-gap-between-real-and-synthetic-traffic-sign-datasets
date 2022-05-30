@@ -26,7 +26,7 @@ $B = bias + u^\gamma \times (255.bias)$ (Eq. 1)
 
 where $bias$ determines the minimum brightness, and $u$ is a sample from an uniform distribution between[0,1]. In  our tests we set $bias=10$ and $\gamma = 2$
 
-Most works so far use real scenery images as backgrounds for the synthetic samples. We also explored applying solid colour backgrounds. 
+Most works so far use real scenery images as backgrounds for the synthetic samples. We also explored applying solid colour backgrounds, as shown in the image above. 
 
 All options included we were able to generate four different datasets:
 
