@@ -22,7 +22,7 @@ When real data is available it is possible to add more information to the genera
 
 In the absence of real data, the overall brightness of the image is computed as:
 
-$B = bias + u^\gamma \times (255.bias)$ (Eq. 1
+$B = bias + u^\gamma \times (255.bias)$ (Eq. 1)
 
 where $bias$ determines the minimum brightness, and $u$ is a sample from an uniform distribution between[0,1]. In  our tests we set $bias=10$ and $\gamma = 2$
 
@@ -34,7 +34,7 @@ All options included we were able to generate four different datasets:
 - SER: Synthetic dataset with brightness drawn from exponential equation (Eq. 1) and real image backgrounds.
 - SJS: Synthetic dataset with brightness drawn from Johnson distribution and solid color backgrounds.
 - SJR: Synthetic dataset with brightness drawn from Johnson distribution and real image backgrounds.
-- 
+
 As opposed to previous works such as [1] and [2] we didn´t aim at achieving photo-realistic imagery for our synthetic samples, yet we were able to achieve state of the art results with our approach. 
 
 ### Refs
