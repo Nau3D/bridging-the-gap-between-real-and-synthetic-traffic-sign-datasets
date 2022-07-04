@@ -53,7 +53,26 @@ All options included we were able to generate four different datasets:
 - SJS: Synthetic dataset with brightness drawn from Johnson distribution and solid color backgrounds.
 - SJR: Synthetic dataset with brightness drawn from Johnson distribution and real image backgrounds.
 
-As opposed to previous works such as [1] and [2] we didn´t aim at achieving photo-realistic imagery for our synthetic samples, yet we were able to achieve state of the art results with our approach. 
+Script *generator.py* can be used to generate the synthetic datasets.
+
+Example:
+
+`python generator.py --templates template_location --output dest_dir --number 2000 --seed 0 --brightness exp2 --negative_folder backgrounds --negative_ratio 1`
+
+Parameters:
+
+- --templates: the folder where the templates are located
+- --output: folder where the synthetic dataset will be written
+- --number: number of samples to generate for each class
+- --seed: differente seeds will provide different datasets
+- --brightness: one of ['exp2', 'belgium', 'croatian', 'german']. 'exp2' refers to equation (1), whereas the other options will use the respective Johnson distribution.
+- --negative_folder: (optional) if using real backgrounds, the folder where these are stored. Note: background images should be signless street views for best results.
+- --negative_ratio: [0m,1] the ratio between solid color backgrounds and negative backgrounds. 0 is all solid color.
+
+Some more options are available, see the script code.
+
+As opposed to previous works such as [1] and [2] we didn´t aim at achieving photo-realistic imagery for our synthetic samples.  As can be seen from the samples above, our signs are not realistic at all, yet our results clearly surpass previous attempts of using synthetic datasets. This may hint that our notion of "realism" may not be the mos suitable for a CNN model.
+
 
 ### Refs
 
