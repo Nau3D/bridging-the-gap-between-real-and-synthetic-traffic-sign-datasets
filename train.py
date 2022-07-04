@@ -72,7 +72,7 @@ parser.add_argument('--model',  type=str, default='None',
                                         help="Use this option to set a starting model if training fails (default: %(default)s)")
 # use hue = 0.2 for croatian datasets, 0.4 otherwise    
 parser.add_argument('--hue',  type=float, default=0.4,
-                                        help="hue range for dynamic data augmentation to  (default: %(default)s)")
+                                        help="hue range for dynamic data augmentation to  (default: %(default)s). Note: for rMASTIF a value of 0.2 is more appropriate")
 parser.add_argument('--lr_dec',  type=float, default=1,
                                         help="learning rate decrease factor (default: %(default)s)")
 
