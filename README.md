@@ -168,7 +168,7 @@ The following results were obtained by merging one of these unleashed datasets w
 
 |       | restricted | Unleashed |
 |-------|------------|-----------|
-| GTRSB | $99.70$    | $\mathbf{99.80}$   |
+| GTSRB | $99.70$    | $\mathbf{99.80}$   |
 | BTSC  | $99.36$    | $\mathbf{99.76}$   |
 
 The result for GTSRB shows a considerable improvment compared to the previous merged version, being very close to Haloi's result [3] with a single model having a quarter the number of parameters. Regarding BTSC, the result surpasses the result in [4] (previous state of the art with an accuracy of $99.71$, classifying correctly 2514 out of 2520 images in the testset.
