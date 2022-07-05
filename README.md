@@ -88,17 +88,31 @@ Parameters:
 
 Other parameters are available, see the script code.
 
-## Results
+## Results for synthetic datasets solo
 
-Results for our synthetic datasets. Where available the best third party results are also presented.
+Results for our synthetic datasets. Where available the best third party results are also presented. Results are also presented for models trained with real data to show the gap between training with real and synthetic data. Note: the real datasets we're previously balanced using the script `balance.py`. Our results are an average of 5 runs.
 
-### GTSRB
+### GTSRB (real data = $99.64 \pm 0.02$)
 
 |             | Real Bg.         | Solid Bg.           |
 |-------------|------------------|---------------------|
 | Luo et. al. | 97.25            | (real data = 99.20) |
 | SE          | $99.32 \pm 0.25$ | $99.25 \pm 0.06 $   |
 | SJ          | $99.41 \pm 0.05$ | $99.39 \pm 0.08$    |
+
+### BTSC (real data = $99.30 \pm 0.03$)
+
+|    | Real Bg.         | Solid Bg.         |
+|----|------------------|-------------------|
+| SE | $98.86 \pm 0.12$ | $99.12 \pm 0.04 $ |
+| SJ | $98.92 \pm 0.09$ | $99.11 \pm 0.09$  |
+
+### rMASTIF (real data = $99.71 \pm 0.05$)
+
+|    | Real Bg.         | Solid Bg.         |
+|----|------------------|-------------------|
+| SE | $99.27 \pm 0.14$ | $99.47 \pm 0.09 $ |
+| SJ | $99.37 \pm 0.08$ | $99.26 \pm 0.17$  |
 
 ## Refs
 
