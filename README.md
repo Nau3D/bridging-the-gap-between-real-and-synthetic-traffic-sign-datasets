@@ -98,28 +98,81 @@ Results for our synthetic datasets. Where available the best third party results
 |-------------|------------------|---------------------|
 | Luo et. al. | 97.25            | (real data = 99.20) |
 | SE          | $99.32 \pm 0.25$ | $99.25 \pm 0.06 $   |
-| SJ          | $99.41 \pm 0.05$ | $99.39 \pm 0.08$    |
+| SJ          | $\mathbf{99.41 \pm 0.05}$ | $99.39 \pm 0.08$    |
 
 ### BTSC (real data = $99.30 \pm 0.03$)
 
 |    | Real Bg.         | Solid Bg.         |
 |----|------------------|-------------------|
-| SE | $98.86 \pm 0.12$ | $99.12 \pm 0.04 $ |
+| SE | $98.86 \pm 0.12$ | $\mathbf{99.12 \pm 0.04} $ |
 | SJ | $98.92 \pm 0.09$ | $99.11 \pm 0.09$  |
 
 ### rMASTIF (real data = $99.71 \pm 0.05$)
 
 |    | Real Bg.         | Solid Bg.         |
 |----|------------------|-------------------|
-| SE | $99.27 \pm 0.14$ | $99.47 \pm 0.09 $ |
+| SE | $99.27 \pm 0.14$ | $\mathbf{99.47 \pm 0.09} $ |
 | SJ | $99.37 \pm 0.08$ | $99.26 \pm 0.17$  |
+
+Our synthetic data results are always less than half of a percent from the results we obtained with real data. For both BTSC and rMASTIFF we got better results with *SES* datasets. For the GTSRB synthetic datasets best results were obtained with the *SJR* dataset. This discrepancy may be due to the fact that this later dataset is the darkest of them all (see the figure with the Johnson distributions).
+
+## Results for merged datasets
+
+For these tests we merged the synthetic datasets with the real dataset, resulting in approximatelly 50/50 division between real and synthetic data. Note that our real datasets have been balanced to have at least 2000 images per class, and the synthetic datasets also have 2000 samples per class. As the solid colour datasets are less biased and provide more diversity in this context (real data already has real backgrounds) these were selected in this experiment.
+
+|             | GTSRB                     | BTSC                      | rMASTIF                   |
+|-------------|---------------------------|---------------------------|---------------------------|
+| Lou et. al. | $99.41$                   |                           |                           |
+| Real + SES  | $99.70 \pm 0.04$          | $99.36 \pm 0.05$          | $99.81 \pm 0.04$          |
+| Real + SJS  | $\mathbf{99.75 \pm 0.02}$ | $\mathbf{99.40 \pm 0.05}$ | $\mathbf{99.84 \pm 0.07}$ |
+
+As expected with merged datasets we achieve better results than both real and synthetic datasets on their own. A slight advantage can be observed when using the *SJS* datasets.
+
+## Results for ensembles
+
+Since we have three different types of datasets (5 trained models for each) we decided to try ensembling these different models. Each ensemble has three models trained with the following datasets:
+
+- SER for the full synthetic dataset
+- Real data
+- Merged: Real + SJS
+
+Each ensemble was evaluated 5 times.
+
+| GTSRB                     | BTSC                      | rMASTIF                   |
+|---------------------------|---------------------------|---------------------------|
+| $\mathbf{99.82 \pm 0.02}$ | $\mathbf{99.38 \pm 0.05}$ | $\mathbf{99.79 \pm 0.07}$ |
+
+While ensembles for BTSC and rMASTIFF provide worse results than the models trained with the merged datasets, in GTSRB we are able to surpass the result from Haloi [3], at $99.81$.
+
+## Cross-testing
+
+In order to be able to assess synthetic datasets generalization capability we performed cross-testing across the different datasets. 
+
+To perform this test, we used the models trained in a dataset, for instance from Germany, and tested these models in the common classes from the other two datasets. By common classes we mean classes where the pictograms have the same semantic meaning even though the pictograms may vary slightly from country to country. The following figure shows the class equivalence we found for this test.
+
+![similar signs](/images/signs_similar.jpg)
+
+|                                         | sample count | R     | SER   | SES   |
+|-----------------------------------------|--------------|-------|-------|-------|
+| Trained: GTRSB - Tested_ BTSC + rMASTIF | 1829         | 97.18 | 98.33 | $\mathbf{98.30}$ |
+| Trained: BTSC - Tested_ GTSRB + rMASTIF | 6410         | 82.39 | 95.75 | $\mathbf{94.73}$ |
+| Trained: rMASTIF- Tested_ GTSRB + BTSC  | 8029         | 90.24 | 94.50 | $\mathbf{95.41}$ |
+
+
+
+## Unleasing synthetic datasets
+
+All previous
 
 ## Refs
 
 [1] Luo, H., Kong, Q., and Wu, F. (2018). Traffic sign image synthesis with generative adversarial networks.
 In 2018 24th International Conference on Pattern Recognition (ICPR), pages 2540–2545.
 
+
 [2] Spata, D., Horn, D., and Houben, S. (2019). Generation
 of natural traffic sign images using domain translation with cycle-consistent generative adversarial networks. In 2019 IEEE Intelligent Vehicles Symposium
 (IV), pages 702–708.
+
+[3] Haloi, M. (2015). Traffic sign classification using deep inception based convolutional networks, [arxiv](https://arxiv.org/abs/1511.02992])
 
