@@ -164,16 +164,14 @@ Results hint that, when compared to real data, our synthetic datasets perform be
 
 All previous test were performed by considering templates that appeared in the training set for each country. However,  in particular in the BTSC dataset some variations of the Parking sign are only available on the test set. In a real usage scenario it would make sense to use all the variations to build the synthetic dataset, afterall the cost of adding a variation is just getting the template image.  The test was also performed for the GTSRB as some variants are only found in the test set.
 
-The following results were obtained by merging one of these unleashed datasets with real data:
+The following results were obtained by merging one of these unleashed datasets with real data, together with the previous merged results:
 
 |       | restricted | Unleashed |
 |-------|------------|-----------|
 | GTRSB | $99.70$    | $\mathbf{99.80}$   |
 | BTSC  | $99.36$    | $\mathbf{99.76}$   |
 
-
-
-All previous
+The result for GTSRB shows a considerable improvment compared to the previous merged version, being very close to Haloi's result [3] with a single model having a quarter the number of parameters. Regarding BTSC, the result surpasses the result in [4] (previous state of the art with an accuracy of $99.71$, classifying correctly 2514 out of 2520 images in the testset.
 
 ## Refs
 
@@ -187,3 +185,4 @@ of natural traffic sign images using domain translation with cycle-consistent ge
 
 [3] Haloi, M. (2015). Traffic sign classification using deep inception based convolutional networks, [arxiv](https://arxiv.org/abs/1511.02992])
 
+[4] Mahmoud, M. A. B. and Guo, P. (2019). A novel method for traffic sign recognition based on dcgan and mlp with pilae algorithm. IEEE Access, 7:74602–74611.
