@@ -55,7 +55,7 @@ All options included we were able to generate four different datasets:
 
 Script *generator.py* can be used to generate the synthetic datasets.
 
-Example:
+Usage example:
 
 `python generator.py --templates template_location --output dest_dir --number 2000 --seed 0 --brightness exp2 --negative_folder backgrounds --negative_ratio 1`
 
@@ -73,8 +73,34 @@ Some more options are available, see the script code.
 
 As opposed to previous works such as [1] and [2] we didn´t aim at achieving photo-realistic imagery for our synthetic samples.  As can be seen from the samples above, our signs are not realistic at all, yet our results clearly surpass previous attempts of using synthetic datasets. This may hint that our notion of "realism" may not be the mos suitable for a CNN model.
 
+To train a model with a dataset (synthetic, real, or a merge of both) use the script train.py
 
-### Refs
+Usage example:
+
+`python train.py --data my_dataset --seed 0 --runs 5 --epochs 40`
+
+Parameters:
+
+- --data: folder where the dataset is locates
+- --seed: sets pytorch seeds. Different seeds will generate different trained models
+- --runs: number of models to train
+- --epochs: total number of epochs to run
+
+Other parameters are available, see the script code.
+
+## Results
+
+Results for our synthetic datasets. Where available the best third party results are also presented.
+
+### GTSRB
+
+|             | Real Bg.         | Solid Bg.           |
+|-------------|------------------|---------------------|
+| Luo et. al. | 97.25            | (real data = 99.20) |
+| SE          | $99.32 \pm 0.25$ | $99.25 \pm 0.06 $   |
+| SJ          | $99.41 \pm 0.05$ | $99.39 \pm 0.08$    |
+
+## Refs
 
 [1] Luo, H., Kong, Q., and Wu, F. (2018). Traffic sign image synthesis with generative adversarial networks.
 In 2018 24th International Conference on Pattern Recognition (ICPR), pages 2540–2545.
