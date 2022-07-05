@@ -142,12 +142,13 @@ Each ensemble was evaluated 5 times.
 |---------------------------|---------------------------|---------------------------|
 | $\mathbf{99.82 \pm 0.02}$ | $\mathbf{99.38 \pm 0.05}$ | $\mathbf{99.79 \pm 0.07}$ |
 
-While ensembles for BTSC and rMASTIFF provide worse results than the models trained with the merged datasets, in GTSRB we are able to surpass the result from Haloi [3], at $99.81$. The best ensemble for GTSRB achieved an accuracy of $99.85$, getting right 12611 of 12630 images on the test set. Note that our model has 2.7 million parameters and Haloi's model has over 10 million.
+While ensembles for BTSC and rMASTIFF provide worse results than the models trained with the merged datasets, in GTSRB we are able to surpass the result from Haloi [3], at $99.81$. The best ensemble for GTSRB achieved an accuracy of $99.85$, getting right 12611 of 12630 images on the test set. Note our input is 32x32 vs Haloi 128x128.
+
 ## Cross-testing
 
 In order to be able to assess synthetic datasets generalization capability we performed cross-testing across the different datasets. 
 
-To perform this test, we used the models trained in a dataset, for instance from Germany, and tested these models in the common classes from the other two datasets. By common classes we mean classes where the pictograms have the same semantic meaning even though the pictograms may vary slightly from country to country. The following figure shows the class equivalence we found for this test.
+To perform this test, we used the models trained in a dataset, for instance from Germany, and tested these models in the common classes from the other two datasets. By common classes we mean classes where the pictograms have the same semantic meaning even though the pictograms may vary slightly from country to country. The following figure shows the class equivalence we found for this test. 
 
 ![similar signs](/images/signs_similar.jpg)
 
@@ -162,6 +163,13 @@ Results hint that, when compared to real data, our synthetic datasets perform be
 ## Unleasing synthetic datasets
 
 All previous test were performed by considering templates that appeared in the training set for each country. However,  in particular in the BTSC dataset some variations of the Parking sign are only available on the test set. In a real usage scenario it would make sense to use all the variations to build the synthetic dataset, afterall the cost of adding a variation is just getting the template image.  The test was also performed for the GTSRB as some variants are only found in the test set.
+
+The following results were obtained by merging one of these unleashed datasets with real data:
+
+|       | restricted | Unleashed |
+|-------|------------|-----------|
+| GTRSB | $99.70$    | $\mathbf{99.80}$   |
+| BTSC  | $99.36$    | $\mathbf{99.76}$   |
 
 
 
