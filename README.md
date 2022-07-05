@@ -142,8 +142,7 @@ Each ensemble was evaluated 5 times.
 |---------------------------|---------------------------|---------------------------|
 | $\mathbf{99.82 \pm 0.02}$ | $\mathbf{99.38 \pm 0.05}$ | $\mathbf{99.79 \pm 0.07}$ |
 
-While ensembles for BTSC and rMASTIFF provide worse results than the models trained with the merged datasets, in GTSRB we are able to surpass the result from Haloi [3], at $99.81$.
-
+While ensembles for BTSC and rMASTIFF provide worse results than the models trained with the merged datasets, in GTSRB we are able to surpass the result from Haloi [3], at $99.81$. The best ensemble for GTSRB achieved an accuracy of $99.85$, getting right 12611 of 12630 images on the test set. Note that our model has 2.7 million parameters and Haloi's model has over 10 million.
 ## Cross-testing
 
 In order to be able to assess synthetic datasets generalization capability we performed cross-testing across the different datasets. 
@@ -154,13 +153,17 @@ To perform this test, we used the models trained in a dataset, for instance from
 
 |                                         | sample count | R     | SER   | SES   |
 |-----------------------------------------|--------------|-------|-------|-------|
-| Trained: GTRSB - Tested_ BTSC + rMASTIF | 1829         | 97.18 | 98.33 | $\mathbf{98.30}$ |
-| Trained: BTSC - Tested_ GTSRB + rMASTIF | 6410         | 82.39 | 95.75 | $\mathbf{94.73}$ |
-| Trained: rMASTIF- Tested_ GTSRB + BTSC  | 8029         | 90.24 | 94.50 | $\mathbf{95.41}$ |
+| Trained: GTRSB - Tested_ BTSC + rMASTIF | $1829$         | $97.18$ | $\mathbf{98.33}$ | $98.30$ |
+| Trained: BTSC - Tested_ GTSRB + rMASTIF | $6410$         | $82.39$ | $\mathbf{95.75}$ | $94.73$ |
+| Trained: rMASTIF- Tested_ GTSRB + BTSC  | $8029$         | $90.24$ | $94.50$ | $\mathbf{95.41}$ |
 
-
+Results hint that, when compared to real data, our synthetic datasets perform better when confronted with slightly different pictograms, different cameras, and different lighting conditions. This is perhaps he most relevant test, as it is not feasible to capture all signs in all lighting conditions and with a broad range of cameras. Furthermore, slightly different pictograms for each sign can be found in most countries, as a result of the introduction of updated signs coexisting with older versions of the same sign.
 
 ## Unleasing synthetic datasets
+
+All previous test were performed by considering templates that appeared in the training set for each country. However,  in particular in the BTSC dataset some variations of the Parking sign are only available on the test set. In a real usage scenario it would make sense to use all the variations to build the synthetic dataset, afterall the cost of adding a variation is just getting the template image.  The test was also performed for the GTSRB as some variants are only found in the test set.
+
+
 
 All previous
 
