@@ -175,16 +175,14 @@ The following results were obtained by merging one of these unleashed datasets w
 | GTSRB | $99.70$    | $\mathbf{99.80}$   |
 | BTSC  | $99.36$    | $\mathbf{99.76}$   |
 
-The result for GTSRB shows a considerable improvment compared to the previous merged version, being very close to Haloi's result [3] with a single model having a quarter the number of parameters. Regarding BTSC, the result surpasses the result in [4] (previous state of the art with an accuracy of $99.71$, classifying correctly 2514 out of 2520 images in the testset.
+The result for GTSRB shows a considerable improvment compared to the previous merged version, being very close to Haloi's result [3] with a single model having a quarter the number of parameters. Regarding BTSC, the result surpasses the result in [4] (best result reported so far for BTSC with an accuracy of $99.71$), classifying correctly 2514 out of 2520 images in the testset.
 
 ## Refs
 
 [1] Luo, H., Kong, Q., and Wu, F. (2018). Traffic sign image synthesis with generative adversarial networks.
 In 2018 24th International Conference on Pattern Recognition (ICPR), pages 2540–2545.
 
-
-[2] Spata, D., Horn, D., and Houben, S. (2019). Generation
-of natural traffic sign images using domain translation with cycle-consistent generative adversarial networks. In 2019 IEEE Intelligent Vehicles Symposium
+[2] Spata, D., Horn, D., and Houben, S. (2019). Generation of natural traffic sign images using domain translation with cycle-consistent generative adversarial networks. In 2019 IEEE Intelligent Vehicles Symposium
 (IV), pages 702–708.
 
 [3] Haloi, M. (2015). Traffic sign classification using deep inception based convolutional networks, [arxiv](https://arxiv.org/abs/1511.02992])
