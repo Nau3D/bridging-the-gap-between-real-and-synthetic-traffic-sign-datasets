@@ -150,7 +150,7 @@ In order to be able to assess synthetic datasets generalization capability we pe
 
 To perform this test, we used the models trained in a dataset, for instance from Germany, and tested these models in the common classes from the other two datasets. By common classes we mean classes where the pictograms have the same semantic meaning even though the pictograms may vary slightly from country to country. The following figure shows the class equivalence we found for this test. 
 
-![similar signs](/images/signs_similar.jpg)
+![similar signs](/images/signs_similar.png)
 
 |                                         | sample count | R     | SER   | SES   |
 |-----------------------------------------|--------------|-------|-------|-------|
