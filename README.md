@@ -177,6 +177,20 @@ The following results were obtained by merging one of these unleashed datasets w
 
 The result for GTSRB shows a considerable improvment compared to the previous merged version, being very close to Haloi's result [3] with a single model having a quarter the number of parameters. Regarding BTSC, the result surpasses the result in [4] (best result reported so far for BTSC with an accuracy of $99.71$), classifying correctly 2514 out of 2520 images in the testset.
 
+## Conclusion
+
+When considering solo datasets, models trained with our synthetic datasets provides accuracies which are very close to models trained with real data.
+
+Combining these datasets, either ensembling or merging with real data, provides results that surpass all previous published reports on three datasets. The table bellow shows the best results for each dataset:
+
+| dataset | method    | accuracy         |
+|---------|-----------|------------------|
+| GTRSB   | ensemble  | $99.82 \pm 0.02$ |
+| BTSC    | unleashed | $99.76$          |
+| rMASTIF | merged    | $99.84 \pm 0.07$ |
+
+Nevertheless, the most interesting result probably comes from the cross-testing experiment where we have observed a significantly higher generalization capability of our synthetic datasets vs real datasets.
+
 ## Refs
 
 [1] Luo, H., Kong, Q., and Wu, F. (2018). Traffic sign image synthesis with generative adversarial networks.
