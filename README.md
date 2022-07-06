@@ -53,6 +53,10 @@ All options included we were able to generate four different datasets:
 - SJS: Synthetic dataset with brightness drawn from Johnson distribution and solid color backgrounds.
 - SJR: Synthetic dataset with brightness drawn from Johnson distribution and real image backgrounds.
 
+THe full sample generator algorithm is as follows:
+
+![algorithm](/images/algorithm.png)
+
 Script *generator.py* can be used to generate the synthetic datasets.
 
 Usage example:
