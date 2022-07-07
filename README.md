@@ -156,7 +156,7 @@ To perform this test, we used the models trained in a dataset, for instance from
 
 ![similar signs](/images/signs_similar.png)
 
-|                                         | sample count | R     | SER   | SES   |
+|                                         | sample count | Real     | SER   | SES   |
 |-----------------------------------------|--------------|-------|-------|-------|
 | Trained: GTRSB - Tested_ BTSC + rMASTIF | $1829$         | $97.18$ | $\mathbf{98.33}$ | $98.30$ |
 | Trained: BTSC - Tested_ GTSRB + rMASTIF | $6410$         | $82.39$ | $\mathbf{95.75}$ | $94.73$ |
