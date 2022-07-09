@@ -46,7 +46,7 @@ In  our tests we set $bias=10, \gamma = 2$.
 
 Most works so far use real scenery images as backgrounds for the synthetic samples. We also explored applying solid colour backgrounds, as shown in the image above. 
 
-All options included we were able to generate four different datasets:
+All options considered we were able to generate four different datasets:
 
 - SES: Synthetic dataset with brightness drawn from exponential equation (Eq. 1) and solid color backgrounds.
 - SER: Synthetic dataset with brightness drawn from exponential equation (Eq. 1) and real image backgrounds.
