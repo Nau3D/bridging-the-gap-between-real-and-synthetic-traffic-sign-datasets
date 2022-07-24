@@ -183,13 +183,13 @@ When considering solo datasets, models trained with our synthetic datasets provi
 
 Combining these datasets, either ensembling or merging with real data, provides results that surpass all previous published reports on three datasets. The table bellow shows the best results for each dataset:
 
-| dataset | method    | accuracy         |
-|---------|-----------|------------------|
-| GTRSB   | ensemble  | $99.82 \pm 0.02$ |
-| BTSC    | unleashed | $99.76$          |
-| rMASTIF | merged    | $99.84 \pm 0.07$ |
+| dataset | method    | accuracy         | prev. reports           |
+|---------|-----------|------------------|-------------------------|
+| GTRSB   | ensemble  | $99.82 \pm 0.02$ | $99.81$ [3]             |
+| BTSC    | unleashed | $99.76$          | $99.71$ [4]             |
+| rMASTIF | merged    | $99.84 \pm 0.07$ | $99.53 \pm 0.10$  [5]   |
 
-Nevertheless, the most interesting result probably comes from the cross-testing experiment where we have observed a significantly higher generalization capability of our synthetic datasets vs real datasets.
+Nevertheless, despite having surpassed current state of the art results, we believe that the most interesting result probably comes from the cross-testing experiment where we have observed a significantly higher generalization capability of our synthetic datasets vs real datasets.
 
 ## Refs
 
@@ -202,3 +202,7 @@ In 2018 24th International Conference on Pattern Recognition (ICPR), pages 2540â
 [3] Haloi, M. (2015). Traffic sign classification using deep inception based convolutional networks, [arxiv](https://arxiv.org/abs/1511.02992])
 
 [4] Mahmoud, M. A. B. and Guo, P. (2019). A novel method for traffic sign recognition based on dcgan and mlp with pilae algorithm. IEEE Access, 7:74602â€“74611.
+
+[5] Jurisic, F., Filkovic, I., and Kalafatic, Z. (2015). Multiple-dataset traffic sign classification with Onecnn. 3rd IAPR Asian Conference on Pattern Recognition
+
+
