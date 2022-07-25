@@ -1,8 +1,7 @@
 # Bridging the Gap Between Real and Synthetic Traffic Sign Repositories
 
-Diogo Lopes da Silva and António Ramires Fernandes
+Diogo Lopes da Silva and António Ramires Fernandes,  in proceedings of Delta 2022
 
-to be published in proceedings of Delta 2022
 
 This work aims at generating synthetic traffic sign datasets. These datasets can be be used to train CNN models that provide high levels of accuracy when tested with real data.
 
@@ -190,6 +189,11 @@ Combining these datasets, either ensembling or merging with real data, provides 
 | rMASTIF | merged    | $99.84 \pm 0.07$ | $99.53 \pm 0.10$  [5]   |
 
 Nevertheless, despite having surpassed current state of the art results, we believe that the most interesting result probably comes from the cross-testing experiment where we have observed a significantly higher generalization capability of our synthetic datasets vs real datasets.
+
+
+The ref to the full paper is:
+
+Lopes da Silva, D. and Fernandes, A. (2022). Bridging the Gap between Real and Synthetic Traffic Sign Repositories. In Proceedings of the 3rd International Conference on Deep Learning Theory and Applications - DeLTA, ISBN 978-989-758-584-5; ISSN 2184-9277, pages 44-54. DOI: 10.5220/0011301100003277
 
 ## Refs
 
