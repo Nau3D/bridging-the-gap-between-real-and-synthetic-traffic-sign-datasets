@@ -161,7 +161,7 @@ To perform this test, we used the models trained in a dataset, for instance from
 | Trained: BTSC - Tested_ GTSRB + rMASTIF | $6410$         | $82.39$ | $\mathbf{95.75}$ | $94.73$ |
 | Trained: rMASTIF- Tested_ GTSRB + BTSC  | $8029$         | $90.24$ | $94.50$ | $\mathbf{95.41}$ |
 
-Results hint that, when compared to real data, our synthetic datasets perform better when confronted with slightly different pictograms, different cameras, and different lighting conditions. This is perhaps he most relevant test, as it is not feasible to capture all signs in all lighting conditions and with a broad range of cameras. Furthermore, slightly different pictograms for each sign can be found in most countries, as a result of the introduction of updated signs coexisting with older versions of the same sign.
+Results hint that, when compared to real data, our synthetic datasets perform better when confronted with slightly different pictograms, different cameras, and different lighting conditions. This is perhaps the most relevant test, as it is not feasible to capture all signs in all lighting conditions and with a broad range of cameras. Furthermore, slightly different pictograms for each sign can be found in most countries, as a result of the introduction of updated signs coexisting with older versions of the same sign.
 
 ## Unleasing synthetic datasets
 
